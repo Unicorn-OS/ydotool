@@ -9,3 +9,15 @@
   ansible.builtin.file:
     path: "{{repo_path}}/build"
     state: directory
+
+- name: Run cmake
+  ansible.builtin.shell: cmake ..
+  args:
+    chdir: "{{repo_path}}/build"
+    creates: "{{repo_path}}/build/ydotool.service"
+
+- name: Run make
+  ansible.builtin.shell: make -j `nproc`
+  args:
+    chdir: "{{repo_path}}/build"
+    creates: "{{repo_path}}/build/ydotool"
