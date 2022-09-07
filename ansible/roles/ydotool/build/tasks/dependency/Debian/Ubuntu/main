@@ -1,0 +1,7 @@
+---
+- name: Install build dependency
+  ansible.builtin.apt:
+    pkg:
+    - cmake
+    - git
+  become: true

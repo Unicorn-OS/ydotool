@@ -3,5 +3,6 @@
   gather_facts: yes
 
   roles:
-  - ydotool
-  - sudoers
+  # - ydotool/package
+  - ydotool/build
+  # - sudoers

@@ -16,5 +16,5 @@ ansible_user=me
 ansible_become_password=u
 
 [node:children]
-local
-#test
+#local
+test

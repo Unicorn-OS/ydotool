@@ -1,0 +1,11 @@
+---
+- name: Git checkout
+  ansible.builtin.git:
+    repo: 'https://github.com/ReimuNotMoe/ydotool.git'
+    dest: "{{repo_path}}"
+    version: "{{git_tag}}"
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: "{{repo_path}}/build"
+    state: directory

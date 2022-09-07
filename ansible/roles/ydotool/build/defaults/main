@@ -1,0 +1,5 @@
+---
+
+git_tag: v1.0.1
+
+repo_path: "/home/{{ansible_user}}/ydotool"
