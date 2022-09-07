@@ -1,1 +1,19 @@
 ---
+
+- name: Install ydotool into bin
+  ansible.builtin.copy:
+    src: "{{item}}"
+    dest: /usr/bin/
+    remote_src: yes
+  loop:
+    - "{{repo_path}}/build/ydotool"
+    - "{{repo_path}}/build/ydotoold"
+  become: true
+
+
+- name: Install ydotool.service
+  ansible.builtin.copy:
+    src: "{{repo_path}}/build/ydotool.service"
+    dest: /usr/lib/systemd/system/
+    remote_src: yes
+  become: true
