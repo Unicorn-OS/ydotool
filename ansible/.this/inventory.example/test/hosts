@@ -8,7 +8,7 @@ ansible_user=me
 ansible_become_password=u
 
 [test]
-192.168.122.66
+192.168.122.56
 
 [test:vars]
 ansible_python_interpreter=/usr/bin/python3
@@ -16,4 +16,5 @@ ansible_user=me
 ansible_become_password=u
 
 [node:children]
-local
+#local
+test

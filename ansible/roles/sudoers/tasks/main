@@ -1,1 +1,8 @@
 ---
+- name: Allow a user to sudo ydotool without a password!
+  community.general.sudoers:
+    name: ydotool
+    user: "{{ansible_user}}"
+    commands: /usr/bin/ydotool
+    nopassword: true
+  become: true
