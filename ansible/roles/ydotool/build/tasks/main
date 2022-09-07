@@ -1,4 +1,6 @@
 ---
 - include_tasks: 'dependency/{{ ansible_os_family }}/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}'
 
-- include_tasks: compile
+- include_tasks: build
+
+- include_tasks: install
