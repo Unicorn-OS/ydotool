@@ -3,6 +3,8 @@
   community.general.sudoers:
     name: ydotool
     user: "{{ansible_user}}"
-    commands: /usr/bin/ydotool
+    commands:
+      - /usr/bin/ydotool
+      - /usr/bin/ydotoold
     nopassword: true
   become: true
