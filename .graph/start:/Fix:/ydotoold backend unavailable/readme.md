@@ -1,0 +1,1 @@
+- [ydotoold backend unavailable #36](https://github.com/ReimuNotMoe/ydotool/issues/36)
